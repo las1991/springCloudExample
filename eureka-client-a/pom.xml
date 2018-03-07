@@ -17,11 +17,6 @@
             <artifactId>eureka-client</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-            <version>${spring.netflix}</version>
-        </dependency>
     </dependencies>
 
 </project>

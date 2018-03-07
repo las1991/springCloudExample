@@ -16,6 +16,7 @@
         <module>ribbon</module>
         <module>feign</module>
         <module>zuul</module>
+        <module>eureka-consumer</module>
     </modules>
 
     <properties>
