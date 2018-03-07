@@ -12,10 +12,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ComputeServiceApplication {
+public class EurekaClientAApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ComputeServiceApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(EurekaClientAApplication.class).web(true).run(args);
     }
 
 }
