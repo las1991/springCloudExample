@@ -9,28 +9,24 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>compute-service</module>
+        <module>eureka-client</module>
         <module>eureka-server</module>
         <module>ribbon</module>
         <module>feign</module>
         <module>zuul</module>
     </modules>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.7.RELEASE</version>
-    </parent>
+    <properties>
+        <spring.boot>1.5.10.RELEASE</spring.boot>
+        <spring.netflix>1.4.3.RELEASE</spring.netflix>
+    </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Brixton.SR5</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>1.5.10.RELEASE</version>
+        </dependency>
+    </dependencies>
+
 </project>
