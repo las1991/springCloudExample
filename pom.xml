@@ -17,6 +17,7 @@
         <module>feign</module>
         <module>zuul</module>
         <module>eureka-consumer</module>
+        <module>consu-service-a</module>
     </modules>
 
     <properties>
