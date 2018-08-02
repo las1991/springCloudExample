@@ -11,5 +11,23 @@
 
     <artifactId>consul-service-a</artifactId>
 
+    <properties>
+        <spring-cloud-starter-consul-discovery.version>1.2.3.RELEASE</spring-cloud-starter-consul-discovery.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+            <version>${spring-cloud-starter-consul-discovery.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-cloud-starter-web</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
 
 </project>
