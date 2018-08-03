@@ -17,8 +17,9 @@
         <module>feign</module>
         <module>zuul</module>
         <module>eureka-consumer</module>
-        <module>consu-service-a</module>
         <module>common-controller</module>
+        <module>consul-service-a</module>
+        <module>consul-service-b</module>
     </modules>
 
     <properties>
@@ -37,6 +38,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter</artifactId>
             <version>${spring.cloud.common}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${spring.boot}</version>
         </dependency>
     </dependencies>
 

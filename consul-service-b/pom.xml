@@ -9,17 +9,20 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>consul-service-a</artifactId>
-
-    <properties>
-        <spring-cloud-starter-consul-discovery.version>1.2.3.RELEASE</spring-cloud-starter-consul-discovery.version>
-    </properties>
+    <artifactId>consul-service-b</artifactId>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.las.learn</groupId>
+            <artifactId>common-controller</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-            <version>${spring-cloud-starter-consul-discovery.version}</version>
+            <version>${spring.cloud.common}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
