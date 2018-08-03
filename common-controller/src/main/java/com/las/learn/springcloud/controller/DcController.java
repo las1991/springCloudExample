@@ -12,14 +12,9 @@ public class DcController {
     @Autowired
     DiscoveryClient discoveryClient;
 
-    @Autowired
-    Registration registration;
-
-
     @GetMapping("/dc")
     public String dc() {
-        String services = "Services: " + discoveryClient.getServices() + " _ " + registration.getUri();
-        System.out.println(services);
+        String services = discoveryClient.description() + " Services: " + discoveryClient.getServices();
         return services;
     }
 

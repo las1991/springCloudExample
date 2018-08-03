@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.las.learn</groupId>
-            <artifactId>eureka-client</artifactId>
+            <artifactId>common-controller</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
