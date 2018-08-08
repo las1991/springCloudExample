@@ -11,11 +11,20 @@
 
     <artifactId>consul-client-discovery</artifactId>
 
+    <properties>
+        <spring-retry.version>1.2.2.RELEASE</spring-retry.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
             <version>${spring.cloud.common}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+            <version>${spring-retry.version}</version>
         </dependency>
     </dependencies>
 
