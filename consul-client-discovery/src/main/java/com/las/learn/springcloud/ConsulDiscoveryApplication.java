@@ -4,10 +4,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
 import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient
 @SpringBootApplication
+@ComponentScan(excludeFilters = {
+        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = DefaultRibbonClientConfiguration.class)
+})
 public class ConsulDiscoveryApplication {
 
     public static void main(String[] args) {
@@ -15,7 +20,7 @@ public class ConsulDiscoveryApplication {
 
         RestTemplate restTemplate = context.getBean(RestTemplate.class);
 
-        String result = restTemplate.getForObject("http://consul-service/error", String.class);
+        String result = restTemplate.getForObject("http://consul-service/400", String.class);
         System.out.println(result);
     }
 
