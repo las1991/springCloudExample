@@ -32,7 +32,7 @@ public class DefaultRibbonClientConfiguration {
     }
 
     @Bean
-    public RetryHandler getRetryHandler(@Autowired(required = false) IClientConfig config) {
+    public RetryHandler getRetryHandler(IClientConfig config) {
         RetryHandler handler = new RequestSpecificRetryHandler(true, true, new DefaultLoadBalancerRetryHandler(0, 1, true), config);
         return handler;
     }
