@@ -22,13 +22,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-            <version>${spring.cloud.common}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-cloud-starter-web</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 

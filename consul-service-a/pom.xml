@@ -22,7 +22,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-            <version>${spring.cloud.common}</version>
         </dependency>
     </dependencies>
 
