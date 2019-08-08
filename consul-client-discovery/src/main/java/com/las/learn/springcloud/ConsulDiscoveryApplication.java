@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 @SpringBootApplication
 @ComponentScan(excludeFilters = {
-        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = DefaultRibbonClientConfiguration.class)
+        @ComponentScan.Filter(type = FilterType.REGEX, pattern = "com.las.learn.springcloud.ribbonClient.*")
 })
 public class ConsulDiscoveryApplication {
 
