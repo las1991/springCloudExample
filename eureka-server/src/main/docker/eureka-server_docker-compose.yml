@@ -2,12 +2,14 @@ version: '3'
 services:
   eureka-server-1:
     image: springcloud-example/eureka-server
+    hostname: eureka-server-1
     ports:
       - "8761:8761"
     environment:
       - spring.profiles.active=eureka-server-1
   eureka-server-2:
     image: springcloud-example/eureka-server
+    hostname: eureka-server-2
     ports:
       - "8762:8761"
     environment:

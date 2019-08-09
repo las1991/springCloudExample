@@ -6,7 +6,7 @@ server:
 
 eureka:
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     register-with-eureka: true
     fetch-registry: true
@@ -14,8 +14,6 @@ eureka:
 spring:
   profiles: eureka-server-1
 eureka:
-  instance:
-    hostname: eureka-server-1
   client:
     serviceUrl:
       defaultZone: http://eureka-server-2:8761/eureka/
@@ -24,8 +22,6 @@ eureka:
 spring:
   profiles: eureka-server-2
 eureka:
-  instance:
-    hostname: eureka-server-2
   client:
     serviceUrl:
       defaultZone: http://eureka-server-1:8761/eureka/
