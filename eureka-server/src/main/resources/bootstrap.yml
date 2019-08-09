@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: microservice-discovery-eureka-ha
+server:
+  port: 8761
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+---
+spring:
+  profiles: eureka-server-1
+eureka:
+  instance:
+    hostname: eureka-server-1
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server-2:8761/eureka/
+
+---
+spring:
+  profiles: eureka-server-2
+eureka:
+  instance:
+    hostname: eureka-server-2
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server-1:8761/eureka/
